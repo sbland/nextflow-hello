@@ -1,0 +1,28 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/nf-core/modules/master/subworkflows/yaml-schema.json
+name: "demosub2"
+## TODO nf-core: Add a description of the subworkflow and list keywords
+description: Example sub workflow
+keywords:
+  - demo
+## TODO nf-core: List all of the channels used as input with a description and their structure
+input:
+  - ch_input_fields:
+      type: str
+      description: |
+        input fields
+output:
+  - out:
+      type: file
+      description: |
+        Output file
+      pattern: "*.txt"
+  - versions:
+      type: file
+      description: |
+        File containing software versions
+        Structure: [ path(versions.yml) ]
+      pattern: "versions.yml"
+authors:
+  - "@sbland"
+maintainers:
+  - "@sbland"
